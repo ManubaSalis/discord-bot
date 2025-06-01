@@ -83,4 +83,4 @@ async def on_ready():
         )
         await channel.send(embed=embed, view=ActionButtons())
 
-bot.run(os.getenv("MTM3ODcwOTcwNzU4NTIyODkxMg.GW-veC.37YavZvuD_Tivsm5CT3NZhiOjKFOvIbsUxe8D8"))
+bot.run(os.getenv("BOT_TOKEN"))

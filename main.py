@@ -22,25 +22,25 @@ class ActionButtons(View):
         super().__init__(timeout=None)
         self.redeem_msg = None
 
-    @discord.ui.button(label="Redeem Key", style=discord.ButtonStyle.green, custom_id="redeem")
+    @discord.ui.button(label="🔑Redeem Key", style=discord.ButtonStyle.green, custom_id="redeem")
     async def redeem_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.send_modal(KeyModal())
 
-    @discord.ui.button(label="Get Script", style=discord.ButtonStyle.blurple, custom_id="get_script")
+    @discord.ui.button(label="📜Get Script", style=discord.ButtonStyle.blurple, custom_id="get_script")
     async def get_script(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.send_message(
             "**Not whitelisted!**\nYou need to be whitelisted to get this script.\nIf you have a script key, click on the Redeem button below to redeem it.",
             ephemeral=True
         )
 
-    @discord.ui.button(label="Buyer Server", style=discord.ButtonStyle.gray, custom_id="buyer_server")
+    @discord.ui.button(label="📩Buyer Server", style=discord.ButtonStyle.gray, custom_id="buyer_server")
     async def buyer_server(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.send_message(
             "**Not whitelisted!**\nYou need to be whitelisted to get this script.\nIf you have a script key, click on the Redeem button below to redeem it.",
             ephemeral=True
         )
 
-    @discord.ui.button(label="Reset HWID", style=discord.ButtonStyle.red, custom_id="reset_hwid")
+    @discord.ui.button(label="⚙️Reset HWID", style=discord.ButtonStyle.red, custom_id="reset_hwid")
     async def reset_hwid(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.send_message(
             "**Not whitelisted!**\nYou need to be whitelisted to get this script.\nIf you have a script key, click on the Redeem button below to redeem it.",

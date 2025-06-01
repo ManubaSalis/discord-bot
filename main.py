@@ -57,12 +57,12 @@ class KeyModal(discord.ui.Modal, title="Redeem Script Key"):
         if len(key) != 32:
             await interaction.response.send_message("❌ Invalid key format. Make sure it's exactly 32 characters long.", ephemeral=True)
         elif key in used_keys:
-            await interaction.response.send_message("🔁 Key has already been used.", ephemeral=True)
+            await interaction.response.send_message("An error occurred | Key has already been used.", ephemeral=True)
         elif key in valid_keys:
             used_keys.add(key)
-            await interaction.response.send_message("✅ Key has already been used.", ephemeral=True)
+            await interaction.response.send_message("An error occurred | Key has already been used.", ephemeral=True)
         else:
-            await interaction.response.send_message("❌ Invalid key.", ephemeral=True)
+            await interaction.response.send_message("An error occurred | Key doesn't exist.", ephemeral=True)
 
 
 @bot.event
@@ -73,7 +73,7 @@ async def on_ready():
     channel = bot.get_channel(1378720138089468095)  # <--- Replace this with your channel ID
     if channel:
         embed = discord.Embed(
-            title="🎮 Glacier X - Control Panel",
+            title="Glacier X - Control Panel",
             description=(
                 "**This control panel is for the project: Glacier X**\n"
                 "If you're a buyer, click on the buttons below to redeem your key, get the script or join the buyer server\n\n"
